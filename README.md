@@ -23,17 +23,17 @@ where myfile.html.crystal could be:
 ```
 <html>
 ~title = "hello world"
-	<head>
-		<title>{{ title }}</title>
-	</head>
-	<body>
-		<h1>{{ title }}</h1>
-		<ol>
+    <head>
+        <title>{{ title }}</title>
+    </head>
+    <body>
+        <h1>{{ title }}</h1>
+        <ol>
 ~for n in range(0,3):
-	        <li>Item {{n}}</li>
+            <li>Item {{n}}</li>
 ~/for
         </ol>
-	</body>
+    </body>
 </html>
 ```
 
