@@ -23,17 +23,17 @@ where myfile.html.crystal could be:
 ```
 <html>
 ~title = "hello world"
-	<head>
-		<title>{{ title }}</title>
-	</head>
-	<body>
-		<h1>{{ title }}</h1>
-		<ol>
+    <head>
+        <title>{{ title }}</title>
+    </head>
+    <body>
+        <h1>{{ title }}</h1>
+        <ol>
 ~for n in range(0,3):
-	        <li>Item {{n}}</li>
+            <li>Item {{n}}</li>
 ~/for
         </ol>
-	</body>
+    </body>
 </html>
 ```
 
@@ -46,7 +46,7 @@ bash-3.2$ ./crystal myfile.c.crystal > myfile.c
 ~COUNT = 5
 #include <stdio.h>
 main(){
-	for (int n=0; n<COUNT; n++){
+	for (int n = 0; n < {{COUNT}}; n++){
 		printf("item %d\n", n);
 	}
 }
