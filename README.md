@@ -46,7 +46,7 @@ bash-3.2$ ./crystal myfile.c.crystal > myfile.c
 ~COUNT = 5
 #include <stdio.h>
 main(){
-	for (int n=0; n<COUNT; n++){
+	for (int n = 0; n < {{COUNT}}; n++){
 		printf("item %d\n", n);
 	}
 }
