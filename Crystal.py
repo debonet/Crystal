@@ -341,7 +341,7 @@ def fsTraceError(e, sCode):
 
 # ----------------------------------------------------------------------------
 # ----------------------------------------------------------------------------
-def fcodeCompile(sTemplate, config={}, sflWorking = "TEMPLATE"):
+def ftcodescodeCompile(sTemplate, config={}, sflWorking = "TEMPLATE"):
     sCode = fsCodeCompileTemplate(sTemplate, config, sflWorking)
     sErr = None
     try:
@@ -352,6 +352,10 @@ def fcodeCompile(sTemplate, config={}, sflWorking = "TEMPLATE"):
     if sErr:
         raise CrystalException(sErr)
 
+# ----------------------------------------------------------------------------
+# ----------------------------------------------------------------------------
+def fcodeCompile(sTemplate, config={}, sflWorking = "TEMPLATE"):
+    return ftcodescodeCompile(sTemplate, config, sflWorking)[0]
     
 # ----------------------------------------------------------------------------
 # ----------------------------------------------------------------------------
@@ -361,7 +365,7 @@ def fsEvaluateTemplate(
 ):
     """ evaluate template """
 
-    code,sCode = fcodeCompile(sTemplate, config, sflWorking)
+    code,sCode = ftcodescodeCompile(sTemplate, config, sflWorking)
 
     return fsEvaluateCompiledTemplate(code, envGlobal, envLocal, config, sCode)
 
@@ -409,7 +413,7 @@ def fsEvaluateCompiledTemplate(
         raise CrystalException(sErr)
 
     # eliminate the first newline, but add one at the end
-    return _sFinal[1:]+'\n'
+    return _sFinal[1:]
 
 # ----------------------------------------------------------------------------
 # ----------------------------------------------------------------------------
@@ -503,7 +507,7 @@ def ffsCodeCompileTemplate(
     ftsa = fftsaCodeCompileTemplate(sTemplate,sArgs,config,sflWorking)
 
     def fs(aArgs):
-        return ftsa(aArgs)[0]
+        return ftsa(aArgs)[0][1:]
             
     return fs
     
@@ -517,5 +521,6 @@ evaluateTemplate         = fsEvaluateTemplate;
 compileTemplate          = fcodeCompile;
 evaluateCompiledTemplate = fsEvaluateCompiledTemplate;
 evaluateFile             = fsEvaluateFile;
+functionFromTemplate     = ffsCodeCompileTemplate;
 
 

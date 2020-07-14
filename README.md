@@ -52,16 +52,26 @@ main(){
 }
 ```
 
-Or to use it as a Python library, by doing something like this:
+Or to use it as a Python library, by doing something like one of these:
 
 ```
 import Crystal;
 
-print(Crystal.evaluateTemplate("""
-~x = 3
-The value of x is {{x}}!
-"""))
+template = """
+~y = x * x
+The value of x is {{x}} so the value of y is {{y}}!
+""";
 
+# evaluate the template directly
+print( Crystal.evaluateTemplate(template, {"x":1}) )
+
+# compile it for later use
+code = Crystal.compileTemplate(template)
+print( Crystal.evaluateCompiledTemplate(code, {"x":2}) )
+
+# or convert it into a function for later use
+f = Crystal.functionFromTemplate(template)
+print( f({"x":3}) )
 ```
 
 
@@ -396,3 +406,9 @@ now its like a
 ~#Hi-lock: (("^~.*$" (0 (quote hi-blue) append)))
 ~#Hi-lock: (("{{[^}]*}}" (0 (quote hi-blue) append)))
 ```
+
+
+
+
+# More usage examples
+
