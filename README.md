@@ -349,18 +349,18 @@ This line is outside the function
 ~for n in range(1,3):
 this line
 ~    for n2 in range(4,6):
-this line
+that line
 ~    /for
 ~/for
 ~= annotate False
 ```
 
-> this line                                                                        	/* info.crystal:147 */  
-> this line                                                                        	/* info.crystal:149 */  
-> this line                                                                        	/* info.crystal:149 */  
-> this line                                                                        	/* info.crystal:147 */  
-> this line                                                                        	/* info.crystal:149 */  
-> this line                                                                        	/* info.crystal:149 */  
+> this line&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/\* info.crystal:350 \*/  
+> that line&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/\* info.crystal:352 \*/  
+> that line&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/\* info.crystal:352 \*/  
+> this line&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/\* info.crystal:350 \*/  
+> that line&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/\* info.crystal:352 \*/  
+> that line&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/\* info.crystal:352 \*/  
 
 
 ```
