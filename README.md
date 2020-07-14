@@ -78,7 +78,7 @@ this is the
 
 and the output is shown like this:
 
-> this is the output
+> this is the output      
 
 
 
@@ -89,9 +89,9 @@ You can set variables like this:
 
 and you can use them like this {{x}} or like this {{x+5}}
 ```
-> You can set variables like this:
-> 
-> and you can use them like this 4 or like this 9
+> You can set variables like this:  
+>   
+> and you can use them like this 4 or like this 9  
 
 ```
 Structures work too: 
@@ -100,9 +100,9 @@ Structures work too:
 and you can access them just like in {{a["c"]}}.
 ```
 
-> Structures work too: 
-> 
-> and you can access them just like in python.
+> Structures work too:   
+>   
+> and you can access them just like in python.  
 
 
 ```
@@ -110,7 +110,7 @@ As do comments.
 ~#like this one which you'll never see
 ```
 
-> As do comments.
+> As do comments.  
 
 
 ```
@@ -122,7 +122,7 @@ You can interjet and
  you wont break lines. Just be careful about adding spaces as needed.
 ```
 
-> You can interjet and you wont break lines. Just be careful about adding spaces as needed.
+> You can interjet and you wont break lines. Just be careful about adding spaces as needed.  
 
 
 
@@ -141,11 +141,11 @@ as many times as you like:
 ~myfunc(9)
 ```
 
-> Functions can be defined using text inside. And then just call them:
->    I like my local value of 3 as much as the input 7
-> 
-> as many times as you like:
->    I like my local value of 3 as much as the input 9
+> Functions can be defined using text inside. And then just call them:  
+>    I like my local value of 3 as much as the input 7  
+>   
+> as many times as you like:  
+>    I like my local value of 3 as much as the input 9  
 
 ```
 scopes and closures are honored. If we set x to 5
@@ -156,9 +156,9 @@ scopes and closures are honored. If we set x to 5
 still leaves x = {{x}}
 ```
 
-> scopes and closures are honored. If we set x to 5 then x = 5, and yet our function which uses x:
->    I like my local value of 3 as much as the input happy
-> still leaves x = 5
+> scopes and closures are honored. If we set x to 5 then x = 5, and yet our function which uses x:  
+>    I like my local value of 3 as much as the input happy  
+> still leaves x = 5  
 
 
 ```
@@ -172,9 +172,9 @@ and we can change its value
 so now a is {{a}}
 ```
 
-> Using global we can reach outside to see that a == {'a': 'javascript', 'c': 'python'}
-> and we can change its value
-> so now a is {'a': 'javascript', 'c': 'python', 'd': 'C++'}
+> Using global we can reach outside to see that a == {'a': 'javascript', 'c': 'python'}  
+> and we can change its value  
+> so now a is {'a': 'javascript', 'c': 'python', 'd': 'C++'}  
 
 
 ```
@@ -187,8 +187,7 @@ Functions that return strings
 can be called {{bar("very")}} lines
 ```
 
-> Functions that return strings can be called in the very middle of lines
-
+> Functions that return strings can be called in the very middle of lines  
 
 
 
@@ -199,9 +198,9 @@ Loops work too:
 ~/for
 ```
 
-> Loops work too:
->          * item 1
->          * item 2
+> Loops work too:  
+>          * item 1  
+>          * item 2  
 
 
 ```
@@ -210,13 +209,13 @@ Loops of functions? Why not!
          * item {{m+10}}
 ~/def
 ~for n in range(1,3):
-~    myfunc2(n)         
+~    myfunc2(n)       
 ~/for
 ```
 
-> Loops of functions? Why not!
->          * item 11
->          * item 12
+> Loops of functions? Why not!  
+>          * item 11  
+>          * item 12  
 
 
 ```
@@ -228,9 +227,9 @@ Loops in functions. Yup. Got that too:
 ~myfunc3()
 ```
 
-> Loops in functions. Yup. Got that too:
->          * item 101
->          * item 102
+> Loops in functions. Yup. Got that too:  
+>          * item 101  
+>          * item 102  
 
 
 ```
@@ -241,7 +240,7 @@ Single line loops work too:
 ~/for
 ```
 
-> Single line loops work too:  * item 1  * item 2  * item 3  * item 4
+> Single line loops work too:  * item 1  * item 2  * item 3  * item 4  
 
 
 ```
@@ -255,12 +254,12 @@ repeat this 3 times
 and repeat this too
 ```
 
-> repeat this 3 times
-> and repeat this too
-> repeat this 3 times
-> and repeat this too
-> repeat this 3 times
-> and repeat this too
+> repeat this 3 times  
+> and repeat this too  
+> repeat this 3 times  
+> and repeat this too  
+> repeat this 3 times  
+> and repeat this too  
 
 
 ```
@@ -270,9 +269,9 @@ repeat this 3 times
 but dont repeat this
 ```
 
-> repeat this 3 times
-> repeat this 3 times
-> but dont repeat this
+> repeat this 3 times  
+> repeat this 3 times  
+> but dont repeat this  
 
 ```
 ~# Notice that the first ~for was not closed. It could be written as:
@@ -282,10 +281,10 @@ and repeat this too
 ~/for
 ```
 
-> repeat this 3 times
-> and repeat this too
-> repeat this 3 times
-> and repeat this too
+> repeat this 3 times  
+> and repeat this too  
+> repeat this 3 times  
+> and repeat this too  
 
 
 ```
@@ -304,12 +303,12 @@ This line is outside the function
 ~foo()
 ```
 
-> This line is outside the function
-> This line is in the loop.
-> And so is this one.
-> This line is in the loop.
-> And so is this one.
-> This line is not, but is still in the function
+> This line is outside the function  
+> This line is in the loop.  
+> And so is this one.  
+> This line is in the loop.  
+> And so is this one.  
+> This line is not, but is still in the function  
 
 
 ```
@@ -327,12 +326,12 @@ This line is outside the function
 ~foo()
 ```
 
-> This line is outside the function
-> This line is in the loop.
-> And so is this one.
-> This line is in the loop.
-> And so is this one.
-> This line is not, but is still in the function.
+> This line is outside the function  
+> This line is in the loop.  
+> And so is this one.  
+> This line is in the loop.  
+> And so is this one.  
+> This line is not, but is still in the function.  
 
 ```
 ~# if something gets complicated you can annotate it
@@ -346,12 +345,12 @@ this line
 ~= annotate False
 ```
 
-> this line                                                                        	/* info.crystal:147 */
-> this line                                                                        	/* info.crystal:149 */
-> this line                                                                        	/* info.crystal:149 */
-> this line                                                                        	/* info.crystal:147 */
-> this line                                                                        	/* info.crystal:149 */
-> this line                                                                        	/* info.crystal:149 */
+> this line                                                                        	/* info.crystal:147 */  
+> this line                                                                        	/* info.crystal:149 */  
+> this line                                                                        	/* info.crystal:149 */  
+> this line                                                                        	/* info.crystal:147 */  
+> this line                                                                        	/* info.crystal:149 */  
+> this line                                                                        	/* info.crystal:149 */  
 
 
 ```
@@ -359,18 +358,18 @@ this line
 ~# either as a configuration parameter to the evaluate function
 ~# or direclty within the template
 
-~= code ^---> (.*)$
-~= ender ^--->(.*)<
-~= nobreak ^[ \t]*<nobreak>[ \t]*$
+~= code ^---> (.*)$  
+~= ender ^--->(.*)<  
+~= nobreak ^[ \t]*<nobreak>[ \t]*$  
 ~= open \$\(
 ~= close \)
 
----> kind = "different"
+---> kind = "different"  
 now its like a
-<nobreak>
+<nobreak>  
  totally $(kind) language!
 ```
-> now its like a totally different language!
+> now its like a totally different language!  
 
 
 ```
@@ -381,15 +380,15 @@ or go wild and invent your own crazy syntax
 ~= nobreak ^!!\+\+KEEP\+\+!!$
 ~= reassign ^:set(.*)$
 :set open (<<)
-:set close (>>)
+:set close (>>)  
 
 !!kind = "different"!!
 now its like a
 !!++KEEP++!!
- totally <<kind>> language!
+ totally <<kind>> language!  
 ```
 
-> now its like a totally different language!
+> now its like a totally different language!  
 
 
 ```
