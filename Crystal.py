@@ -507,3 +507,15 @@ def ffsCodeCompileTemplate(
             
     return fs
     
+
+
+
+# ----------------------------------------------------------------------------
+# standard python style (unstructued) names for external functions
+# ----------------------------------------------------------------------------
+evaluateTemplate         = fsEvaluateTemplate;
+compileTemplate          = fcodeCompile;
+evaluateCompiledTemplate = fsEvaluateCompiledTemplate;
+evaluateFile             = fsEvaluateFile;
+
+

@@ -1,3 +1,88 @@
+# What
+
+Crystal is a templating system, or equivalently language pre-processor, that leverages the full power of python inserted throughout.
+
+# Key features
+
+* **Powerful** - templates that expose the full power of Python
+* **Efficient** - compile into pure python for high performance 
+* **Scalable** - line-by-line error reporting to find issues in complex templates
+* **Applicable** - use as a stand alone meta language/template engine/preprocessor
+* **Flexible** - customize the syntax to suit your preference or constraints
+
+# Use cases
+
+To use it as a template processor / preprocessor do something like this:
+
+```
+bash-3.2$ ./crystal myfile.html.crystal > myfile.html
+```
+
+where myfile.html.crystal could be:
+
+```
+<html>
+~title = "hello world"
+	<head>
+		<title>{{ title }}</title>
+	</head>
+	<body>
+		<h1>{{ title }}</h1>
+		<ol>
+~for n in range(0,3):
+	        <li>Item {{n}}</li>
+~/for
+        </ol>
+	</body>
+</html>
+```
+
+or use it as a better preprocessor:
+```
+bash-3.2$ ./crystal myfile.c.crystal > myfile.c
+```
+
+```
+~COUNT = 5
+#include <stdio.h>
+main(){
+	for (int n=0; n<COUNT; n++){
+		printf("item %d\n", n);
+	}
+}
+```
+
+Or to use it as a Python library, by doing something like this:
+
+```
+import Crystal;
+
+print(Crystal.evaluateTemplate("""
+~x = 3
+The value of x is {{x}}!
+"""))
+
+```
+
+
+# Examples to show the power of Crystal
+
+In the examples below, templates are shown like this:
+
+```
+this is the
+~# the template, not
+~^
+ output
+```
+
+and the output is shown like this:
+
+> this is the output
+
+
+
+
 ```
 You can set variables like this:
 ~x = 4
@@ -307,7 +392,8 @@ now its like a
 > now its like a totally different language!
 
 
-
+```
 ~#and you can even have emacs highlight the meta lines
 ~#Hi-lock: (("^~.*$" (0 (quote hi-blue) append)))
 ~#Hi-lock: (("{{[^}]*}}" (0 (quote hi-blue) append)))
+```
