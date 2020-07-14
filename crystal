@@ -1,0 +1,11 @@
+#!/usr/bin/python3
+
+import Crystal
+
+import sys
+if __name__ == "__main__":
+    env = {}
+    for sfl in sys.argv[1:]:
+        print(Crystal.fsEvaluateFile(sfl,env,env),end="")
+
+
