@@ -407,8 +407,3 @@ now its like a
 ~#Hi-lock: (("{{[^}]*}}" (0 (quote hi-blue) append)))
 ```
 
-
-
-
-# More usage examples
-
